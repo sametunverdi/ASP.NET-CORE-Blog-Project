@@ -18,6 +18,11 @@ namespace BusinessLayer.Conctrete
             _messagedal = messagedal;
         }
 
+        public List<Message> GetMessagesWithUserService()
+        {
+            return _messagedal.GetList();
+        }
+
         public void TAdd(Message t)
         {
             _messagedal.Insert(t);
@@ -25,17 +30,17 @@ namespace BusinessLayer.Conctrete
 
         public void TDelete(Message t)
         {
-            throw new NotImplementedException();
+            _messagedal.Delete(t);
         }
 
         public Message TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _messagedal.GetByID(id);
         }
 
         public List<Message> TGetlist()
         {
-            throw new NotImplementedException();
+            return _messagedal.GetList();
         }
 
         public void TUpdate(Message t)

@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EntityLayer.Concrete
 {
-    public class User
+    public class AppUser 
     {
         [Key]
         public int UserID { get; set; }

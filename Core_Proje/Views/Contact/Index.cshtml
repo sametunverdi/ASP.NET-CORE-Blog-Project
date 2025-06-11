@@ -1,0 +1,43 @@
+﻿@using EntityLayer.Concrete
+@model List<Message>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<!-- Card header -->
+<div class="card-header border-0">
+    <h3 class="mb-0">Mesaj Listesi</h3>
+</div>
+<!-- Light table -->
+<div class="table-responsive">
+    <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>Gönderen</th>
+                <th>Mesaj</th>
+                <th>Mail</th>
+                <th>Tarih</th>
+                <th>Sil</th>
+                <th>Mesajı Gör</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <th>@item.MessageID</th>
+                    <th>@item.Name</th>
+                    <th>@item.Content</th>
+                    <th>@item.Mail</th>
+                    <th>@item.Date</th>
+                    <th><a href="/Contact/DeleteContact/@item.MessageID" class="btn btn-danger">Sil</a></th>
+                    <th><a href="/Contact/ContactDetails/@item.MessageID" class="btn btn-success">Detay</a></th>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

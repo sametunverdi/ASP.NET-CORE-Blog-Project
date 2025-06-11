@@ -1,7 +1,7 @@
 ﻿@model EntityLayer.Concrete.Portfolio
 @{
     ViewData["Title"] = "AddPortfolio";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
 <div class="card-header border-0">
@@ -10,6 +10,7 @@
 
 @using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
 {
+
 
     <br />
     @Html.Label("Proje Başlığı")
@@ -43,10 +44,10 @@
     <label>Proje URL</label>
     @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.ProjectUrl)
-    <br />
+    <br /> 
 
 
-    <button type="submit" class="btn btn-primary">Kaydet</button>
+    <button  class="btn btn-primary">Kaydet</button>
 }
 
 
