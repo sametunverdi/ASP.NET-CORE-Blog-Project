@@ -50,7 +50,7 @@ namespace BusinessLayer.Conctrete
 
         public List<UserMessage> GetUserMessagesWithUserService()
         {
-            return _userMessageDal.GetUserMessagesWithUser();
+            return _userMessageDal.GetUserMessagesWithUser(); 
         }
     }
 }
