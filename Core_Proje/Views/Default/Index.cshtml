@@ -36,8 +36,8 @@
                         <h2 class="marker marker-center">İletişim</h2>
                     </div>
                     <div class="row">
-                         @await Component.InvokeAsync("SendMessage")
-                        @*  @await Html.PartialAsync("/Views/Default/SendMessage.cshtml")  *@
+              @*            @await Component.InvokeAsync("SendMessage")  *@
+                        @await Html.PartialAsync("SendMessage") 
 
                         @await Component.InvokeAsync("ContactDetails")
 
@@ -66,7 +66,8 @@
                         <div>
                             <!-- Make sure to buy a license for the template before removing the line below. Buy license on@* 
 
-                            https://templateflip.com/ *@ -->Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a> 
+                            https://templateflip.com/ *@ -->
+                            Design - <a href="https://templateflip.com/" target="_blank">TemplateFlip</a>
                         </div>
                     </div>
                 </div>

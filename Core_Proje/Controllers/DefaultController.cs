@@ -28,11 +28,12 @@ namespace Core_Proje.Controllers
         [HttpPost]
         public IActionResult SendMessage(Message p)
         {
+            
             MessageManager messageManager = new MessageManager(new EfMessageDal());
             p.Date = DateTime.Now;
             p.Status = true;
             messageManager.TAdd(p);
-            return RedirectToAction("Index"); // ya da başka bir sayfa
+            return RedirectToAction("Index"); 
         }
     }
 }
